@@ -68,6 +68,21 @@
         <h2 class="about-title">About me</h2>
       </section>
     </main>
-    <script type="module" src="/main.js"></script>
+    <script>
+      // MOBILE MENU TOGGLE
+const mobileToggle = document.querySelector('.mobile-nav-toggle');
+const primaryNav = document.querySelector('.primary-nav');
+
+mobileToggle.addEventListener('click', () => {
+    const visibilty = mobileToggle.getAttribute('aria-expanded');
+    if ( visibilty === 'false') {
+        primaryNav.setAttribute('aria-hidden', false);
+        mobileToggle.setAttribute('aria-expanded', true);
+    } else {
+        primaryNav.setAttribute('aria-hidden', true);
+        mobileToggle.setAttribute('aria-expanded', false);
+      }
+})
+    </script>
   </body>
 </html>
